@@ -5,12 +5,7 @@ class Groundhog
     @name = name
   end
 
-  def name
-    @name
+  def name=new
+    @name = new
   end
-
-  def name=(n)
-    @name = n
-  end
-
 end
