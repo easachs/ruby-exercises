@@ -1,5 +1,4 @@
 class Baby
-  attr_reader :tired
 
   def initialize
     @tired = true

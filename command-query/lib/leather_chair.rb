@@ -1,5 +1,4 @@
 class LeatherChair
-  attr_reader :faded
 
   def initialize
     @faded = false

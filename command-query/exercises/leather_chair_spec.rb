@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'leather_chair'
+require './lib/leather_chair'
 
 RSpec.describe LeatherChair do
   it 'is not faded' do
