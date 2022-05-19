@@ -24,25 +24,26 @@ class Bag
 
   def grab(candy)
     if @candies.any? {candy}
-      @grabbed = @candies.find do |c|
-        c.type.match?(candy)
-      end
+      @grabbed = @candies.find { |c|
+        c.type.match?(candy) }
       @candies.delete(@candies.find { |c|
         c.type.match?(candy) })
-        @empty = true if @candies == []
+      @empty = true if @candies == []
       @grabbed
     end
   end
 
   def take(n)
     if n == 1
-      return @candies[0]
-      @candies.pop
-      @empty = true
-    end
-    n.times do
       @taken << @candies[0]
       @candies.pop
+      @empty = true
+      @taken[0]
+    else n.times {
+      @taken << @candies[0]
+      @candies.shift }
+      @empty = true if @candies == []
+      @taken
     end
   end
 
